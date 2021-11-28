@@ -1,0 +1,12 @@
+venv/
+__pycache__/
+data/__pycache__/
+handlers/__pycache__/
+handlers/AboutBot/__pycache__/
+handlers/ClassTypes/__pycache__/
+handlers/HightClass/__pycache__/
+handlers/LowClass/__pycache__/
+handlers/MediumClass/__pycache__/
+handlers/Start/__pycache__/
+utils/__pycache__/
+.env
