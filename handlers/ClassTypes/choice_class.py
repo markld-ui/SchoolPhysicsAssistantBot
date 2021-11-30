@@ -2,7 +2,7 @@ from aiogram import types
 
 from loader import dp
 
-class_button = ['7 класс', '8 класс', '9 класс']
+class_button = ['7 класс', '8 класс', '9 класс', '10 класс', '11 класс']
 
 '''---CHOICE CLASS FOR USER---'''
 
