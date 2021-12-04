@@ -6,7 +6,6 @@ from loader import dp
 async def disagree(message: types.Message):
     array_disagree = [
                         'Кем разработан этот проект?',
-                        'Планируется добавление формул для 10-11 классов?',
                         'Спасибо, можем приступать.'
                      ]
     keyboard = types.ReplyKeyboardMarkup(resize_keyboard = False)
