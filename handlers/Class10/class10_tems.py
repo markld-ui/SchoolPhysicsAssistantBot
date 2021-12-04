@@ -5,23 +5,23 @@ from handlers.ClassTypes.choice_class import class_button
 from loader import bot
 
 
-@dp.message_handler(lambda message: message.text == 'Электродинамика 10 класс')
+@dp.message_handler(lambda message: message.text == '10.1')
 async def formuls(message : types.Message):
-    keyboard = types.ReplyKeyboardMarkup(resize_keyboard = False)
+    keyboard = types.ReplyKeyboardMarkup(resize_keyboard = True)
     keyboard.add(*array_choice)
     await message.reply(
-    'Пожалуйста: ',
+    'Вами выбрана тема "Электродинамика за 10 класс". Пожалуйста:',
     reply = False,
     reply_markup = keyboard)
     await bot.send_photo(chat_id = message.chat.id, photo = open('utils\\image\\10class\\electrodinamica.jpg', 'rb'))
 
 
-@dp.message_handler(lambda message: message.text == 'Механика')
+@dp.message_handler(lambda message: message.text == '10.2')
 async def formuls(message : types.Message):
-    keyboard = types.ReplyKeyboardMarkup(resize_keyboard = False)
+    keyboard = types.ReplyKeyboardMarkup(resize_keyboard = True)
     keyboard.add(*array_choice)
     await message.reply(
-    'Пожалуйста: ',
+    'Выми выбрана тема "Механика". Пожалуйста: ',
     reply = False,
     reply_markup = keyboard)
     await bot.send_photo(chat_id = message.chat.id, photo = open('utils\\image\\10class\\mechanicap1.jpg', 'rb'))
@@ -32,12 +32,12 @@ async def formuls(message : types.Message):
     await bot.send_photo(chat_id = message.chat.id, photo = open('utils\\image\\10class\\mechanicap6.jpg', 'rb'))
 
 
-@dp.message_handler(lambda message: message.text == 'Молекулярная физика')
+@dp.message_handler(lambda message: message.text == '10.3')
 async def formuls(message : types.Message):
-    keyboard = types.ReplyKeyboardMarkup(resize_keyboard = False)
+    keyboard = types.ReplyKeyboardMarkup(resize_keyboard = True)
     keyboard.add(*array_choice)
     await message.reply(
-    'Пожалуйста: ',
+    'Вами выбрана тема "Молекулярная физика". Пожалуйста: ',
     reply = False,
     reply_markup = keyboard)
     await bot.send_photo(chat_id = message.chat.id, photo = open('utils\\image\\10class\\moleculyarnayap1.jpg', 'rb'))

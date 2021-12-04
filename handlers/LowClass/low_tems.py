@@ -5,73 +5,38 @@ from handlers.ClassTypes.choice_class import class_button
 from loader import bot
 
 
-@dp.message_handler(lambda message: message.text == 'Взаимодействие тел')
+@dp.message_handler(lambda message: message.text == '7.1')
 async def formuls(message : types.Message):
-    keyboard = types.ReplyKeyboardMarkup(resize_keyboard = False)
+    keyboard = types.ReplyKeyboardMarkup(resize_keyboard = True)
     keyboard.add(*array_choice)
     await message.reply(
-    'Пожалуйста: ',
+    'Вами выбрана тема "Взаимодействие тел". Пожалуйста: ',
     reply = False,
     reply_markup = keyboard)
     await bot.send_photo(chat_id = message.chat.id, photo = open('utils\\image\\7class\\vzaimodeistvietel.jpg', 'rb'))
 
 
-@dp.message_handler(lambda message: message.text == 'Давление твёрдых тел, жидкостей и газов')
+@dp.message_handler(lambda message: message.text == '7.2')
 async def formuls(message : types.Message):
-    keyboard = types.ReplyKeyboardMarkup(resize_keyboard = False)
+    keyboard = types.ReplyKeyboardMarkup(resize_keyboard = True)
     keyboard.add(*array_choice)
     await message.reply(
-    'Пожалуйста: ',
+    'Вами выбрана тема "Давление твёрдых тел, жидкостей и газов". Пожалуйста: ',
     reply = False,
     reply_markup = keyboard)
     await bot.send_photo(chat_id = message.chat.id, photo = open('utils\\image\\7class\\davlenietvteljidciproch.jpg', 'rb'))
 
 
-@dp.message_handler(lambda message: message.text == 'Работа, энергия, мощность')
+@dp.message_handler(lambda message: message.text == '7.3')
 async def formuls(message : types.Message):
-    keyboard = types.ReplyKeyboardMarkup(resize_keyboard = False)
+    keyboard = types.ReplyKeyboardMarkup(resize_keyboard = True)
     keyboard.add(*array_choice)
     await message.reply(
-    'Пожалуйста: ',
+    'Вами выбрана тема "Работа, энергия, мощность". Пожалуйста: ',
     reply = False,
     reply_markup = keyboard)
     await bot.send_photo(chat_id = message.chat.id, photo = open('utils\\image\\7class\\rabotaimoshnostp1.jpg', 'rb'))
     await bot.send_photo(chat_id = message.chat.id, photo = open('utils\\image\\7class\\rabotaimoshnostp2.jpg', 'rb'))
-
-
-'''
-@dp.message_handler(lambda message: message.text == 'Давление, сила давления')
-async def formuls(message : types.Message):
-    keyboard = types.ReplyKeyboardMarkup(resize_keyboard = True)
-    keyboard.add(*array_choice)
-    await message.reply(
-    'Пожалуйста: ',
-    reply = False,
-    reply_markup = keyboard)
-    await bot.send_photo(chat_id = message.chat.id, photo = open('utils\\image\\7class\\davlenie.jpg', 'rb'))
-
-
-@dp.message_handler(lambda message: message.text == 'Давление газов и жидкостей')
-async def formuls(message : types.Message):
-    keyboard = types.ReplyKeyboardMarkup(resize_keyboard = True)
-    keyboard.add(*array_choice)
-    await message.reply(
-    'Пожалуйста: ',
-    reply = False,
-    reply_markup = keyboard)
-    await bot.send_photo(chat_id = message.chat.id, photo = open('utils\\image\\7class\\davleniejidcostiigazov.jpg', 'rb'))
-
-
-@dp.message_handler(lambda message: message.text == 'Работа, энергия, мощность')
-async def formuls(message : types.Message):
-    keyboard = types.ReplyKeyboardMarkup(resize_keyboard = True)
-    keyboard.add(*array_choice)
-    await message.reply(
-    'Пожалуйста: ',
-    reply = False,
-    reply_markup = keyboard)
-    await bot.send_photo(chat_id = message.chat.id, photo = open('utils\\image\\7class\\rabota.jpg', 'rb'))
-'''
 
 
 @dp.message_handler(lambda message: message.text == 'Выход')

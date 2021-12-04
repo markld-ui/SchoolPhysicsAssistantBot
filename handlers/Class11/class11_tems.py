@@ -5,12 +5,12 @@ from handlers.ClassTypes.choice_class import class_button
 from loader import bot
 
 
-@dp.message_handler(lambda message: message.text == 'Электродинамика 11 класс')
+@dp.message_handler(lambda message: message.text == '11.1')
 async def formuls(message : types.Message):
-    keyboard = types.ReplyKeyboardMarkup(resize_keyboard = False)
+    keyboard = types.ReplyKeyboardMarkup(resize_keyboard = True)
     keyboard.add(*array_choice)
     await message.reply(
-    'Пожалуйста: ',
+    'Вами выбрана тема "Электродинамика 11 класс". Пожалуйста: ',
     reply = False,
     reply_markup = keyboard)
     await bot.send_photo(chat_id = message.chat.id, photo = open('utils\\image\\11class\\electrodinamicap1.jpg', 'rb'))
@@ -20,12 +20,12 @@ async def formuls(message : types.Message):
     await bot.send_photo(chat_id = message.chat.id, photo = open('utils\\image\\11class\\electrodinamicap5.jpg', 'rb'))
 
 
-@dp.message_handler(lambda message: message.text == 'Физика высоких энергий')
+@dp.message_handler(lambda message: message.text == '11.2')
 async def formuls(message : types.Message):
-    keyboard = types.ReplyKeyboardMarkup(resize_keyboard = False)
+    keyboard = types.ReplyKeyboardMarkup(resize_keyboard = True)
     keyboard.add(*array_choice)
     await message.reply(
-    'Пожалуйста: ',
+    'Вами выбрана тема "Физика высоких энергий". Пожалуйста: ',
     reply = False,
     reply_markup = keyboard)
     await bot.send_photo(chat_id = message.chat.id, photo = open('utils\\image\\11class\\physicshughtenergy.jpg', 'rb'))
