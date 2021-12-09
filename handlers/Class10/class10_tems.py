@@ -5,7 +5,7 @@ from handlers.ClassTypes.choice_class import class_button
 from loader import bot
 
 
-@dp.message_handler(lambda message: message.text == '10.1')
+@dp.message_handler(lambda message: message.text == '10.3')
 async def formuls(message : types.Message):
     keyboard = types.ReplyKeyboardMarkup(resize_keyboard = True)
     keyboard.add(*array_choice)
@@ -16,7 +16,7 @@ async def formuls(message : types.Message):
     await bot.send_photo(chat_id = message.chat.id, photo = open('utils\\image\\10class\\electrodinamica.jpg', 'rb'))
 
 
-@dp.message_handler(lambda message: message.text == '10.2')
+@dp.message_handler(lambda message: message.text == '10.1')
 async def formuls(message : types.Message):
     keyboard = types.ReplyKeyboardMarkup(resize_keyboard = True)
     keyboard.add(*array_choice)
@@ -32,7 +32,7 @@ async def formuls(message : types.Message):
     await bot.send_photo(chat_id = message.chat.id, photo = open('utils\\image\\10class\\mechanicap6.jpg', 'rb'))
 
 
-@dp.message_handler(lambda message: message.text == '10.3')
+@dp.message_handler(lambda message: message.text == '10.2')
 async def formuls(message : types.Message):
     keyboard = types.ReplyKeyboardMarkup(resize_keyboard = True)
     keyboard.add(*array_choice)

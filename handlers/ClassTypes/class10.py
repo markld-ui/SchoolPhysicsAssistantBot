@@ -15,7 +15,7 @@ array_choice = [
 async def choice(message : types.Message):
 	keyboard = types.ReplyKeyboardMarkup(resize_keyboard = True)
 	keyboard.add(*array_choice)
-	await message.reply('Темы:\n10.1 - Электродинамика за 10 класс\n10.2 - Механика\n10.3 - Молекулярная физика', reply = False)
+	await message.reply('Темы:\n10.1 - Механика\n10.2 - Молекулярная физика\n10.3 - Электродинамика за 10 класс', reply = False)
 	await message.reply('Выберите тему, из которой хотите узнать формулы 10 класса:',
 		reply = False,
 		reply_markup = keyboard)
