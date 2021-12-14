@@ -10,3 +10,4 @@ handlers/MediumClass/__pycache__/
 handlers/Start/__pycache__/
 utils/__pycache__/
 .env
+.idea/
