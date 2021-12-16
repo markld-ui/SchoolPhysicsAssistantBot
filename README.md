@@ -2,7 +2,6 @@
 
 ![PyPI](https://img.shields.io/pypi/v/PyPI?color=gree&label=PyPI&style=plastic)
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/aiogram?color=gree&label=Python&logoColor=blue&style=plastic)
-![PyPI - Python Version](https://img.shields.io/pypi/pyversions/environs?color=gree&label=Environs&logoColor=blue&style=plastic)
 
 
 **SchoolPhysicsAssistantBot** - This is an assistant bot for students in grades 7-11 of high school. He will help you quickly pick up the law and the formula for it, if the student has forgotten this information.
@@ -68,7 +67,7 @@ if __name__ == "__main__":
 
 ___
 
-## ___Exemples code in project___
+## ___Exemple code in project___
 
 __File: _handlers/ClassTypes/class11_tems.py___
 
@@ -130,8 +129,8 @@ ___
 
 ## ___Links___
 
-- [X] Programmer lenguage: [Python](https://www.python.org)
-- [X] Documentation: [aiogram](https://docs.aiogram.dev/en/latest/index.html)
+- [X] Programmer language: [Python](https://www.python.org)
+- [X] Documentation aiogram lib: [aiogram](https://docs.aiogram.dev/en/latest/index.html)
 - [X] Telegram Bot API: [API](https://core.telegram.org/bots/api)
 - [X] Information for bot:
   - Formuls for 7 class: [web-site](https://zakon-oma.ru/formuly-po-fizike-7-klassa.php)
