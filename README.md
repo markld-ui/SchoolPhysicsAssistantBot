@@ -50,7 +50,7 @@ from aiogram import Bot, Dispatcher, types, executor
 from data import config
 
 
-bot = Bot(token = config.TOKEN. parse_mode = 'HTML')
+bot = Bot(token = config.TOKEN, parse_mode = 'HTML')
 dp = Dispatcher(bot)
 
 
