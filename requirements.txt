@@ -1,7 +1,4 @@
 aiodns==3.0.0
 aiogram==2.15
 aiohttp==3.7.4.post0
-cchardet==2.1.7
-chardet==4.0.0
-ujson==4.2.0
 environs==9.3.4

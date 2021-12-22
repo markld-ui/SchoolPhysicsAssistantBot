@@ -5,7 +5,6 @@ async def bot_commands(dp):
 
 		[
 			types.BotCommand('help', 'Показать справку команд'),
-			types.BotCommand('profile', 'Показать личный профиль'),
 			types.BotCommand('start', 'Запустить бота')
 		]
 

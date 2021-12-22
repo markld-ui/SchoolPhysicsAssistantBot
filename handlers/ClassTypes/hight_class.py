@@ -13,6 +13,7 @@ array_choice = [
 
 @dp.message_handler(Text(equals = '9 класс'))
 async def choice(message : types.Message):
+	'''this function called to give themes in 9 class'''
 	keyboard = types.ReplyKeyboardMarkup(resize_keyboard = True)
 	keyboard.add(*array_choice)
 	await message.reply('Темы:\n9.1 - Законы взаимодействия и движения тел\n9.2 - Электромагнитное поле\n9.3 - Строение атома и атомного ядра', reply = False)

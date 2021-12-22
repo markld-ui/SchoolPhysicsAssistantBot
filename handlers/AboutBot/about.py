@@ -3,10 +3,9 @@ from aiogram import types
 from loader import dp
 
 
-'''---ABOUT BOT---'''
-
 @dp.message_handler(lambda message: message.text == 'Расскажи о себе')
-async def question_by_user(message : types.Message): #Функция, рассказывающая о возможностях бота
+async def question_by_user(message : types.Message):
+    '''---FUNCTION ABOUT BOT OPPORTUNITIES---'''
     agree = ['Да', 'Нет']
     keyboard = types.ReplyKeyboardMarkup(resize_keyboard = True)
     keyboard.add(*agree)

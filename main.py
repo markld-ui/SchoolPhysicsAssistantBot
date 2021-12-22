@@ -7,9 +7,10 @@ from utils.set_commands import bot_commands
 from loader import dp
 
 async def start_bot_info(dp):
-    #Пишем в личные сообщенеия админу(-ам) о запуске бота
+    '''function calls other functions to load initial commands and settings for the admin'''
+    #send message to admin of bot online
     await notify_admin(dp)
-    #Установка стандартных команд
+    #load standart command
     await bot_commands(dp)
 
 if __name__ == "__main__":

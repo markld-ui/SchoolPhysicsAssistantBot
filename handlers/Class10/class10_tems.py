@@ -5,19 +5,9 @@ from handlers.ClassTypes.choice_class import class_button
 from loader import bot
 
 
-@dp.message_handler(lambda message: message.text == '10.3')
-async def formuls(message : types.Message):
-    keyboard = types.ReplyKeyboardMarkup(resize_keyboard = True)
-    keyboard.add(*array_choice)
-    await message.reply(
-    'Вами выбрана тема "Электродинамика за 10 класс". Пожалуйста:',
-    reply = False,
-    reply_markup = keyboard)
-    await bot.send_photo(chat_id = message.chat.id, photo = open('utils\\image\\10class\\electrodinamica.jpg', 'rb'))
-
-
 @dp.message_handler(lambda message: message.text == '10.1')
 async def formuls(message : types.Message):
+    '''function for 10.1 theme'''
     keyboard = types.ReplyKeyboardMarkup(resize_keyboard = True)
     keyboard.add(*array_choice)
     await message.reply(
@@ -34,6 +24,7 @@ async def formuls(message : types.Message):
 
 @dp.message_handler(lambda message: message.text == '10.2')
 async def formuls(message : types.Message):
+    '''function for 10.2 theme'''
     keyboard = types.ReplyKeyboardMarkup(resize_keyboard = True)
     keyboard.add(*array_choice)
     await message.reply(
@@ -44,8 +35,21 @@ async def formuls(message : types.Message):
     await bot.send_photo(chat_id = message.chat.id, photo = open('utils\\image\\10class\\moleculyarnayap2.jpg', 'rb'))
 
 
+@dp.message_handler(lambda message: message.text == '10.3')
+async def formuls(message : types.Message):
+    '''function for 10.2 theme'''
+    keyboard = types.ReplyKeyboardMarkup(resize_keyboard = True)
+    keyboard.add(*array_choice)
+    await message.reply(
+    'Вами выбрана тема "Электродинамика за 10 класс". Пожалуйста:',
+    reply = False,
+    reply_markup = keyboard)
+    await bot.send_photo(chat_id = message.chat.id, photo = open('utils\\image\\10class\\electrodinamica.jpg', 'rb'))
+
+
 @dp.message_handler(lambda message: message.text == 'Выход')
 async def exit(message: types.Message):
+    '''function for exit in choice class'''
     keyboard = types.ReplyKeyboardMarkup(resize_keyboard = True)
     keyboard.add(*class_button)
     await message.reply(

@@ -5,6 +5,7 @@ from handlers.ClassTypes.choice_class import class_button
 
 @dp.message_handler(lambda message: message.text == 'Спасибо, можем приступать.')
 async def agree(message: types.Message):
+    '''AGREE FUNCTION IF USER RECEIVED ENOUGH INFO ABOUT BOT'''
     keyboard = types.ReplyKeyboardMarkup(resize_keyboard = True)
     keyboard.add(*class_button)
     await message.reply('Выберите свой класс', reply = False, reply_markup=keyboard)

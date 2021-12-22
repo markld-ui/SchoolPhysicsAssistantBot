@@ -4,6 +4,7 @@ from loader import dp
 
 @dp.message_handler(lambda message: message.text == 'Нет')
 async def disagree(message: types.Message):
+    '''DISAGREE FUNCTION IF USER WANTED GET MORE INFO ABOUT BOT'''
     array_disagree = [
                         'Кем разработан этот проект?',
                         'Спасибо, можем приступать.'

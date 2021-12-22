@@ -7,6 +7,7 @@ from loader import bot
 
 @dp.message_handler(lambda message: message.text == '8.1')
 async def formuls(message : types.Message):
+    '''function for 8.1 theme'''
     keyboard = types.ReplyKeyboardMarkup(resize_keyboard = True)
     keyboard.add(*array_choice)
     await message.reply(
@@ -19,6 +20,7 @@ async def formuls(message : types.Message):
 
 @dp.message_handler(lambda message: message.text == '8.2')
 async def formuls(message : types.Message):
+    '''function for 8.2 theme'''
     keyboard = types.ReplyKeyboardMarkup(resize_keyboard = True)
     keyboard.add(*array_choice)
     await message.reply(
@@ -31,6 +33,7 @@ async def formuls(message : types.Message):
 
 @dp.message_handler(lambda message: message.text == '8.3')
 async def formuls(message : types.Message):
+    '''function for 8.3 theme'''
     keyboard = types.ReplyKeyboardMarkup(resize_keyboard = True)
     keyboard.add(*array_choice)
     await message.reply(
@@ -42,6 +45,7 @@ async def formuls(message : types.Message):
 
 @dp.message_handler(lambda message: message.text == '8.4')
 async def formuls(message : types.Message):
+    '''function for 8.4 theme'''
     keyboard = types.ReplyKeyboardMarkup(resize_keyboard = True)
     keyboard.add(*array_choice)
     await message.reply(
@@ -53,6 +57,7 @@ async def formuls(message : types.Message):
 
 @dp.message_handler(lambda message: message.text == 'Выход')
 async def exit(message: types.Message):
+    '''function for exit in choice class'''
     keyboard = types.ReplyKeyboardMarkup(resize_keyboard = True)
     keyboard.add(*class_button)
     await message.reply(
