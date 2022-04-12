@@ -1,1 +1,0 @@
-from . import medium_tems

@@ -1,1 +1,0 @@
-from . import class10_tems
