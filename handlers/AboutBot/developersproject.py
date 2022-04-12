@@ -12,6 +12,6 @@ async def disagree(message: types.Message):
     keyboard.add(*array_disagree)
     await message.reply('Этот проект находится в стадии разработки. Пока что над ним работает ученик МАОУ СОШ 197 г. Екатеринбург 10 класса.',
         reply = False)
-    await message.reply('Перейдём к выбору класса?',
+    await message.reply('Перейдём к выбору опции?',
         reply = False,
         reply_markup = keyboard)
