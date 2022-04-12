@@ -1,34 +1,38 @@
 from aiogram import types
 from loader import dp
-from handlers.ClassTypes.medium_class import array_choice
-from handlers.ClassTypes.choice_class import class_button
+from handlers.HelperClient.ClassTypes.Handbook.medium_class import array_choice
+from handlers.HelperClient.ClassTypes.choice_class import class_button
 from loader import bot
 
 
 @dp.message_handler(lambda message: message.text == '8.1')
 async def formuls(message : types.Message):
     '''function for 8.1 theme'''
+    media = types.MediaGroup()
     keyboard = types.ReplyKeyboardMarkup(resize_keyboard = True)
     keyboard.add(*array_choice)
     await message.reply(
     'Вами выбрана тема "Тепловые явления". Пожалуйста: ',
     reply = False,
     reply_markup = keyboard)
-    await bot.send_photo(chat_id = message.chat.id, photo = open('utils\\image\\8class\\teplovieyavleniyap1.jpg', 'rb'))
-    await bot.send_photo(chat_id = message.chat.id, photo = open('utils\\image\\8class\\teplovieyavleniyap2.jpg', 'rb'))
+    media.attach_photo(types.InputFile('utils\\image\\8class\\teplovieyavleniyap1.jpg'))
+    media.attach_photo(types.InputFile('utils\\image\\8class\\teplovieyavleniyap2.jpg'))
+    await bot.send_media_group(message.chat.id, media=media)
 
 
 @dp.message_handler(lambda message: message.text == '8.2')
 async def formuls(message : types.Message):
     '''function for 8.2 theme'''
+    media = types.MediaGroup()
     keyboard = types.ReplyKeyboardMarkup(resize_keyboard = True)
     keyboard.add(*array_choice)
     await message.reply(
     'Вами выбрана тема "Электрические явления". Пожалуйста: ',
     reply = False,
     reply_markup = keyboard)
-    await bot.send_photo(chat_id = message.chat.id, photo = open('utils\\image\\8class\\electricheskieyavleniyap1.jpg', 'rb'))
-    await bot.send_photo(chat_id = message.chat.id, photo = open('utils\\image\\8class\\electricheskieyavleniyap2.jpg', 'rb'))
+    media.attach_photo(types.InputFile('utils\\image\\8class\\electricheskieyavleniyap1.jpg'))
+    media.attach_photo(types.InputFile('utils\\image\\8class\\electricheskieyavleniyap2.jpg'))
+    await bot.send_media_group(message.chat.id, media=media)
 
 
 @dp.message_handler(lambda message: message.text == '8.3')

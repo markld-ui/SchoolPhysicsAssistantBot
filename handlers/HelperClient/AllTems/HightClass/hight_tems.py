@@ -1,40 +1,43 @@
 from aiogram import types
 from loader import dp
-from handlers.ClassTypes.hight_class import array_choice
-from handlers.ClassTypes.choice_class import class_button
+from handlers.HelperClient.ClassTypes.Handbook.hight_class import array_choice
+from handlers.HelperClient.ClassTypes.choice_class import class_button
 from loader import bot
 
 
 @dp.message_handler(lambda message: message.text == '9.1')
 async def formuls(message : types.Message):
     '''function for 9.1 theme'''
+    media = types.MediaGroup()
     keyboard = types.ReplyKeyboardMarkup(resize_keyboard = True)
     keyboard.add(*array_choice)
     await message.reply(
     'Вами выбрана тема "Законы взаимодействия и движения тел". Пожалуйста: ',
     reply = False,
     reply_markup = keyboard)
-    await bot.send_photo(chat_id = message.chat.id, photo = open('utils\\image\\9class\\zakonivzaimodeistviyaidvijeniyatelp1.jpg', 'rb'))
-    await bot.send_photo(chat_id = message.chat.id, photo = open('utils\\image\\9class\\zakonivzaimodeistviyaidvijeniyatelp2.jpg', 'rb'))
-    await bot.send_photo(chat_id = message.chat.id, photo = open('utils\\image\\9class\\zakonivzaimodeistviyaidvijeniyatelp3.jpg', 'rb'))
-    await bot.send_photo(chat_id = message.chat.id, photo = open('utils\\image\\9class\\zakonivzaimodeistviyaidvijeniyatelp4.jpg', 'rb'))
-    await bot.send_photo(chat_id = message.chat.id, photo = open('utils\\image\\9class\\zakonivzaimodeistviyaidvijeniyatelp5.jpg', 'rb'))
+    media.attach_photo(types.InputFile('utils\\image\\9class\\zakonivzaimodeistviyaidvijeniyatelp1.jpg'))
+    media.attach_photo(types.InputFile('utils\\image\\9class\\zakonivzaimodeistviyaidvijeniyatelp2.jpg'))
+    media.attach_photo(types.InputFile('utils\\image\\9class\\zakonivzaimodeistviyaidvijeniyatelp3.jpg'))
+    media.attach_photo(types.InputFile('utils\\image\\9class\\zakonivzaimodeistviyaidvijeniyatelp4.jpg'))
+    media.attach_photo(types.InputFile('utils\\image\\9class\\zakonivzaimodeistviyaidvijeniyatelp5.jpg'))
+    await bot.send_media_group(message.chat.id, media = media)
 
 
 @dp.message_handler(lambda message: message.text == '9.2')
 async def formuls(message : types.Message):
     '''function for 9.2 theme'''
+    media = types.MediaGroup()
     keyboard = types.ReplyKeyboardMarkup(resize_keyboard = True)
     keyboard.add(*array_choice)
     await message.reply(
     'Вами выбрана тема "Электромагнитное поле". Пожалуйста: ',
     reply = False,
     reply_markup = keyboard)
-    await bot.send_photo(chat_id = message.chat.id, photo = open('utils\\image\\9class\\electromagnitnoepolep1.jpg', 'rb'))
-    await bot.send_photo(chat_id = message.chat.id, photo = open('utils\\image\\9class\\electromagnitnoepolep2.jpg', 'rb'))
-    await bot.send_photo(chat_id = message.chat.id, photo = open('utils\\image\\9class\\electromagnitnoepolep3.jpg', 'rb'))
-    await bot.send_photo(chat_id = message.chat.id, photo = open('utils\\image\\9class\\electromagnitnoepolep4.jpg', 'rb'))
-
+    media.attach_photo(types.InputFile('utils\\image\\9class\\electromagnitnoepolep1.jpg'))
+    media.attach_photo(types.InputFile('utils\\image\\9class\\electromagnitnoepolep2.jpg'))
+    media.attach_photo(types.InputFile('utils\\image\\9class\\electromagnitnoepolep3.jpg'))
+    media.attach_photo(types.InputFile('utils\\image\\9class\\electromagnitnoepolep4.jpg'))
+    await bot.send_media_group(message.chat.id, media = media)
 
 @dp.message_handler(lambda message: message.text == '9.3')
 async def formuls(message : types.Message):
