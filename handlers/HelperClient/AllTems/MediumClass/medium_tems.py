@@ -15,8 +15,9 @@ async def formuls(message : types.Message):
     'Вами выбрана тема "Тепловые явления". Пожалуйста: ',
     reply = False,
     reply_markup = keyboard)
-    media.attach_photo(types.InputFile('utils\\image\\8class\\teplovieyavleniyap1.jpg'))
-    media.attach_photo(types.InputFile('utils\\image\\8class\\teplovieyavleniyap2.jpg'))
+    media.attach_photo(types.InputFile('utils\\media\\image\\8class\\teplovieyavleniyap1.jpg'))
+    media.attach_photo(types.InputFile('utils\\media\\image\\8class\\teplovieyavleniyap2.jpg'))
+    await bot.send_chat_action(message.from_user.id, types.chat.ChatActions.UPLOAD_PHOTO)
     await bot.send_media_group(message.chat.id, media=media)
 
 
@@ -30,8 +31,9 @@ async def formuls(message : types.Message):
     'Вами выбрана тема "Электрические явления". Пожалуйста: ',
     reply = False,
     reply_markup = keyboard)
-    media.attach_photo(types.InputFile('utils\\image\\8class\\electricheskieyavleniyap1.jpg'))
-    media.attach_photo(types.InputFile('utils\\image\\8class\\electricheskieyavleniyap2.jpg'))
+    media.attach_photo(types.InputFile('utils\\media\\image\\8class\\electricheskieyavleniyap1.jpg'))
+    media.attach_photo(types.InputFile('utils\\media\\image\\8class\\electricheskieyavleniyap2.jpg'))
+    await bot.send_chat_action(message.from_user.id, types.chat.ChatActions.UPLOAD_PHOTO)
     await bot.send_media_group(message.chat.id, media=media)
 
 
@@ -44,7 +46,8 @@ async def formuls(message : types.Message):
     'Вами выбрана тема "Электромагнитные явления". Пожалуйста: ',
     reply = False,
     reply_markup = keyboard)
-    await bot.send_photo(chat_id = message.chat.id, photo = open('utils\\image\\8class\\electromagnitnieyavleniya.jpg', 'rb'))
+    await bot.send_chat_action(message.from_user.id, types.chat.ChatActions.UPLOAD_PHOTO)
+    await bot.send_photo(chat_id = message.chat.id, photo = open('utils\\media\\image\\8class\\electromagnitnieyavleniya.jpg', 'rb'))
 
 
 @dp.message_handler(lambda message: message.text == '8.4')
@@ -56,7 +59,8 @@ async def formuls(message : types.Message):
     'Вами выбрана тема "Световые явления". Пожалуйста: ',
     reply = False,
     reply_markup = keyboard)
-    await bot.send_photo(chat_id = message.chat.id, photo = open('utils\\image\\8class\\svetovieyacleniya.jpg', 'rb'))
+    await bot.send_chat_action(message.from_user.id, types.chat.ChatActions.UPLOAD_PHOTO)
+    await bot.send_photo(chat_id = message.chat.id, photo = open('utils\\media\\image\\8class\\svetovieyacleniya.jpg', 'rb'))
 
 
 @dp.message_handler(lambda message: message.text == 'Выход')

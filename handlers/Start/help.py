@@ -1,15 +1,14 @@
 from aiogram import types
 
 from aiogram.dispatcher.filters.builtin import CommandHelp
-
+from handlers.HelperClient.ClassTypes.choice_method import methods_button
 from loader import dp
 
 
 @dp.message_handler(CommandHelp())
 async def help(message : types.Message): # help function user
     keyboard = types.ReplyKeyboardMarkup(resize_keyboard=True)
-    frist_buttons = ['/start']
-    keyboard.add(*frist_buttons)
+    keyboard.add(*methods_button)
     await message.reply(
         text =
         '''
@@ -17,7 +16,7 @@ async def help(message : types.Message): # help function user
     - /help
     - /start
 
-Нажмите на кнопку, чтобы выйти в главное меню
+Нажмите на одну из кнопок, чтобы перейти к выбору метода образования
         ''',
         reply = False,
         parse_mode = 'HTML',

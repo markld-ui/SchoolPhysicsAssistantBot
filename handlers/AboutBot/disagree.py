@@ -9,7 +9,7 @@ async def disagree(message: types.Message):
                         'Кем разработан этот проект?',
                         'Спасибо, можем приступать.'
                      ]
-    keyboard = types.ReplyKeyboardMarkup(resize_keyboard = False)
+    keyboard = types.ReplyKeyboardMarkup(resize_keyboard = True)
     keyboard.add(*array_disagree)
     await message.reply('Что бы вы хотели узнать ещё?',
         reply = False,

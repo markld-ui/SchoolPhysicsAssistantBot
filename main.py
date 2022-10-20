@@ -6,6 +6,7 @@ from utils.set_commands import bot_commands
 
 from loader import dp
 
+
 async def start_bot_info(dp):
     '''function calls other functions to load initial commands and settings for the admin'''
     #send message to admin of bot online

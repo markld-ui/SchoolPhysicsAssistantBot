@@ -1,8 +1,7 @@
 from aiogram import types
-
 from loader import dp
 
-methods_button = ['Образование (comming soon)', 'Справочник']
+methods_button = ['Образование', 'Справочник']
 
 
 @dp.message_handler(lambda message: message.text == 'Да, конечно')

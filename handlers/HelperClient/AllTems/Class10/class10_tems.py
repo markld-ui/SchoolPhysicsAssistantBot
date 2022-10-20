@@ -15,12 +15,13 @@ async def formuls(message : types.Message):
     'Выми выбрана тема "Механика". Пожалуйста: ',
     reply = False,
     reply_markup = keyboard)
-    media.attach_photo(types.InputFile('utils\\image\\10class\\mechanicap1.jpg'))
-    media.attach_photo(types.InputFile('utils\\image\\10class\\mechanicap2.jpg'))
-    media.attach_photo(types.InputFile('utils\\image\\10class\\mechanicap3.jpg'))
-    media.attach_photo(types.InputFile('utils\\image\\10class\\mechanicap4.jpg'))
-    media.attach_photo(types.InputFile('utils\\image\\10class\\mechanicap5.jpg'))
-    media.attach_photo(types.InputFile('utils\\image\\10class\\mechanicap6.jpg'))
+    media.attach_photo(types.InputFile('utils\\media\\image\\10class\\mechanicap1.jpg'))
+    media.attach_photo(types.InputFile('utils\\media\\image\\10class\\mechanicap2.jpg'))
+    media.attach_photo(types.InputFile('utils\\media\\image\\10class\\mechanicap3.jpg'))
+    media.attach_photo(types.InputFile('utils\\media\\image\\10class\\mechanicap4.jpg'))
+    media.attach_photo(types.InputFile('utils\\media\\image\\10class\\mechanicap5.jpg'))
+    media.attach_photo(types.InputFile('utils\\media\\image\\10class\\mechanicap6.jpg'))
+    await bot.send_chat_action(message.from_user.id, types.chat.ChatActions.UPLOAD_PHOTO)
     await bot.send_media_group(message.chat.id, media=media)
 
 
@@ -34,8 +35,9 @@ async def formuls(message : types.Message):
     'Вами выбрана тема "Молекулярная физика". Пожалуйста: ',
     reply = False,
     reply_markup = keyboard)
-    media.attach_photo(types.InputFile('utils\\image\\10class\\moleculyarnayap1.jpg'))
-    media.attach_photo(types.InputFile('utils\\image\\10class\\moleculyarnayap2.jpg'))
+    media.attach_photo(types.InputFile('utils\\media\\image\\10class\\moleculyarnayap1.jpg'))
+    media.attach_photo(types.InputFile('utils\\media\\image\\10class\\moleculyarnayap2.jpg'))
+    await bot.send_chat_action(message.from_user.id, types.chat.ChatActions.UPLOAD_PHOTO)
     await bot.send_media_group(message.chat.id, media=media)
 
 
@@ -48,7 +50,8 @@ async def formuls(message : types.Message):
     'Вами выбрана тема "Электродинамика за 10 класс". Пожалуйста:',
     reply = False,
     reply_markup = keyboard)
-    await bot.send_photo(chat_id = message.chat.id, photo = open('utils\\image\\10class\\electrodinamica.jpg', 'rb'))
+    await bot.send_chat_action(message.from_user.id, types.chat.ChatActions.UPLOAD_PHOTO)
+    await bot.send_photo(chat_id = message.chat.id, photo = open('utils\\media\\image\\10class\\electrodinamica.jpg', 'rb'))
 
 
 @dp.message_handler(lambda message: message.text == 'Выход')
