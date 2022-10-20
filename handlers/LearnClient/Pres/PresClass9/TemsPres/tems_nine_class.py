@@ -10,7 +10,7 @@ async def send_presentation_for_first_theme(message: types.Message):
     user_id = message.from_user.id
     await message.answer('Презентация на тему "Законы взаимодействия и движения тел"')
     await bot.send_chat_action(user_id, types.chat.ChatActions.UPLOAD_DOCUMENT)
-    await message.reply_document(open('utils\\media\\Presentations\\9class\\9.1\\pres1.txt', 'rb'), reply=False)
+    await message.reply_document(open('utils/media/Presentations/9class/9.1/pres1.txt', 'rb'), reply=False)
     
     
 @dp.message_handler(lambda message: message.text == '9.2p')
@@ -18,7 +18,7 @@ async def send_presentation_for_second_theme(message: types.Message):
     user_id = message.from_user.id
     await message.answer('Презентация на тему "Электромагнитное поле"')
     await bot.send_chat_action(user_id, types.chat.ChatActions.UPLOAD_DOCUMENT)
-    await message.reply_document(open('utils\\media\\Presentations\\9class\\9.2\\pres2.txt', 'rb'), reply=False)
+    await message.reply_document(open('utils/media/Presentations/9class/9.2/pres2.txt', 'rb'), reply=False)
     
 
 @dp.message_handler(lambda message: message.text == '9.3p')
@@ -26,7 +26,7 @@ async def send_presentation_for_third_theme(message: types.Message):
     user_id = message.from_user.id
     await message.answer('Презентация на тему "Строение атома и атомного ядра"')
     await bot.send_chat_action(user_id, types.chat.ChatActions.UPLOAD_DOCUMENT)
-    await message.reply_document(open('utils\\media\\Presentations\\9class\\9.3\\pres3.txt', 'rb'), reply=False)
+    await message.reply_document(open('utils/media/Presentations/9class/9.3/pres3.txt', 'rb'), reply=False)
     
 
 @dp.message_handler(lambda message: message.text == 'Выход к выбору P-класса')

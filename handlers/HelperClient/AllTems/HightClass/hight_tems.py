@@ -15,11 +15,11 @@ async def formuls(message : types.Message):
     'Вами выбрана тема "Законы взаимодействия и движения тел". Пожалуйста: ',
     reply = False,
     reply_markup = keyboard)
-    media.attach_photo(types.InputFile('utils\\media\\image\\9class\\zakonivzaimodeistviyaidvijeniyatelp1.jpg'))
-    media.attach_photo(types.InputFile('utils\\media\\image\\9class\\zakonivzaimodeistviyaidvijeniyatelp2.jpg'))
-    media.attach_photo(types.InputFile('utils\\media\\image\\9class\\zakonivzaimodeistviyaidvijeniyatelp3.jpg'))
-    media.attach_photo(types.InputFile('utils\\media\\image\\9class\\zakonivzaimodeistviyaidvijeniyatelp4.jpg'))
-    media.attach_photo(types.InputFile('utils\\media\\image\\9class\\zakonivzaimodeistviyaidvijeniyatelp5.jpg'))
+    media.attach_photo(types.InputFile('utils/media/image/9class/zakonivzaimodeistviyaidvijeniyatelp1.jpg'))
+    media.attach_photo(types.InputFile('utils/media/image/9class/zakonivzaimodeistviyaidvijeniyatelp2.jpg'))
+    media.attach_photo(types.InputFile('utils/media/image/9class/zakonivzaimodeistviyaidvijeniyatelp3.jpg'))
+    media.attach_photo(types.InputFile('utils/media/image/9class/zakonivzaimodeistviyaidvijeniyatelp4.jpg'))
+    media.attach_photo(types.InputFile('utils/media/image/9class/zakonivzaimodeistviyaidvijeniyatelp5.jpg'))
     await bot.send_chat_action(message.from_user.id, types.chat.ChatActions.UPLOAD_PHOTO)
     await bot.send_media_group(message.chat.id, media = media)
 
@@ -34,10 +34,10 @@ async def formuls(message : types.Message):
     'Вами выбрана тема "Электромагнитное поле". Пожалуйста: ',
     reply = False,
     reply_markup = keyboard)
-    media.attach_photo(types.InputFile('utils\\media\\image\\9class\\electromagnitnoepolep1.jpg'))
-    media.attach_photo(types.InputFile('utils\\media\\image\\9class\\electromagnitnoepolep2.jpg'))
-    media.attach_photo(types.InputFile('utils\\media\\image\\9class\\electromagnitnoepolep3.jpg'))
-    media.attach_photo(types.InputFile('utils\\media\\image\\9class\\electromagnitnoepolep4.jpg'))
+    media.attach_photo(types.InputFile('utils/media/image/9class/electromagnitnoepolep1.jpg'))
+    media.attach_photo(types.InputFile('utils/media/image/9class/electromagnitnoepolep2.jpg'))
+    media.attach_photo(types.InputFile('utils/media/image/9class/electromagnitnoepolep3.jpg'))
+    media.attach_photo(types.InputFile('utils/media/image/9class/electromagnitnoepolep4.jpg'))
     await bot.send_chat_action(message.from_user.id, types.chat.ChatActions.UPLOAD_PHOTO)
     await bot.send_media_group(message.chat.id, media = media)
 
@@ -51,7 +51,7 @@ async def formuls(message : types.Message):
     reply = False,
     reply_markup = keyboard)
     await bot.send_chat_action(message.from_user.id, types.chat.ChatActions.UPLOAD_PHOTO)
-    await bot.send_photo(chat_id = message.chat.id, photo = open('utils\\media\\image\\9class\\stroenieatomyadra.jpg', 'rb'))
+    await bot.send_photo(chat_id = message.chat.id, photo = open('utils/media/image/9class/stroenieatomyadra.jpg', 'rb'))
 
 
 @dp.message_handler(lambda message: message.text == 'Выход')

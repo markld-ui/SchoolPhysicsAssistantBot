@@ -15,7 +15,7 @@ async def formuls(message : types.Message):
     reply = False,
     reply_markup = keyboard)
     await bot.send_chat_action(message.from_user.id, types.chat.ChatActions.UPLOAD_PHOTO)
-    await bot.send_photo(chat_id = message.chat.id, photo = open('utils\\media\\image\\7class\\vzaimodeistvietel.jpg', 'rb'))
+    await bot.send_photo(chat_id = message.chat.id, photo = open('utils/media/image/7class/vzaimodeistvietel.jpg', 'rb'))
 
 
 @dp.message_handler(lambda message: message.text == '7.2')
@@ -28,7 +28,7 @@ async def formuls(message : types.Message):
     reply = False,
     reply_markup = keyboard)
     await bot.send_chat_action(message.from_user.id, types.chat.ChatActions.UPLOAD_PHOTO)
-    await bot.send_photo(chat_id = message.chat.id, photo = open('utils\\media\\image\\7class\\davlenietvteljidciproch.jpg', 'rb'))
+    await bot.send_photo(chat_id = message.chat.id, photo = open('utils/media/image/7class/davlenietvteljidciproch.jpg', 'rb'))
 
 
 @dp.message_handler(lambda message: message.text == '7.3')
@@ -41,8 +41,8 @@ async def formuls(message : types.Message):
     'Вами выбрана тема "Работа, энергия, мощность". Пожалуйста: ',
     reply = False,
     reply_markup = keyboard)
-    media.attach_photo(types.InputFile('utils\\media\\image\\7class\\rabotaimoshnostp1.jpg'))
-    media.attach_photo(types.InputFile('utils\\media\\image\\7class\\rabotaimoshnostp2.jpg'))
+    media.attach_photo(types.InputFile('utils/media/image/7class/rabotaimoshnostp1.jpg'))
+    media.attach_photo(types.InputFile('utils/media/image/7class/rabotaimoshnostp2.jpg'))
     await bot.send_chat_action(message.from_user.id, types.chat.ChatActions.UPLOAD_PHOTO)
     await bot.send_media_group(message.chat.id, media = media)
 
