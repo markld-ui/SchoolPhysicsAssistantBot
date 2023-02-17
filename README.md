@@ -3,6 +3,7 @@
 ![PyPI](https://img.shields.io/pypi/v/PyPI?color=gree&label=PyPI&style=plastic)
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/aiogram?color=gree&label=Python&logoColor=blue&style=plastic)
 
+**THIS CODE ISN'T OPEN SOURCE. He was be developed for to protect the project.**
 
 **SchoolPhysicsAssistantBot** - This is an assistant bot for students in grades 7-11 of high school. He will help you quickly pick up the law and the formula for it, if the student has forgotten this information.
 
