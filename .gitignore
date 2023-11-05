@@ -1,7 +1,9 @@
 venv/
 __pycache__/
 data/__pycache__/
+handlers/Admin/
 handlers/__pycache__/
+handlers/Admin/
 handlers/AboutBot/__pycache__/
 handlers/HelperClient/__pycache__/
 handlers/HelperClient/AllTems/__pycache__/

@@ -1,13 +1,21 @@
 from aiogram import types
-
 from loader import dp
+from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
 
-class_button = ['7 класс', '8 класс', '9 класс', '10 класс', '11 класс', 'Выйти к выбору операции']
+
+class_button = [
+    [KeyboardButton(text='7 класс')],
+    [KeyboardButton(text='8 класс')],
+    [KeyboardButton(text='9 класс')],
+    [KeyboardButton(text='10 класс')],
+    [KeyboardButton(text='11 класс')],
+    [KeyboardButton(text='Выйти к выбору операции')],
+]
 
 
-@dp.message_handler(lambda message: message.text == 'Справочник')
+@dp.message(lambda message: message.text == 'Справочник')
 async def agree(message : types.Message):
     '''---CHOICE CLASS FOR USER IN HANDBOOK---'''
-    keyboard = types.ReplyKeyboardMarkup(resize_keyboard = True)
-    keyboard.add(*class_button)
+    keyboard = ReplyKeyboardMarkup(keyboard=[*class_button],resize_keyboard = True)
+
     await message.reply('Выберите свой класс', reply = False, reply_markup=keyboard)

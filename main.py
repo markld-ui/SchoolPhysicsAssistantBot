@@ -1,17 +1,26 @@
 import handlers
 
-from aiogram import executor
+import asyncio
+from loader import bot
 from utils.notify_admin import notify_admin
-from utils.set_commands import bot_commands
+#from utils.set_commands import set_commands
 
 from loader import dp
 
+
 async def start_bot_info(dp):
     '''function calls other functions to load initial commands and settings for the admin'''
-    #send message to admin of bot online
-    await notify_admin(dp)
-    #load standart command
-    await bot_commands(dp)
+    #await set_commands(bot)
+    await notify_admin()
+
+    try:
+        await dp.start_polling(bot)
+    finally:
+        bot.session.close()
+
 
 if __name__ == "__main__":
-    executor.start_polling(dp, on_startup = start_bot_info)
+    try:
+        asyncio.run(start_bot_info(dp))
+    except KeyboardInterrupt:
+        print('Exit')

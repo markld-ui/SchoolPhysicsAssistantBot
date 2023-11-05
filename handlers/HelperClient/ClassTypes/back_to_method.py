@@ -2,12 +2,13 @@ from aiogram import types
 from handlers.HelperClient.ClassTypes.choice_method import methods_button
 from loader import dp
 
+from aiogram.types import ReplyKeyboardMarkup
 
-@dp.message_handler(lambda message: message.text == 'Выйти к выбору операции')
+
+@dp.message(lambda message: message.text == 'Выйти к выбору операции')
 async def exit(message: types.Message):
     '''function for exit in choice class'''
-    keyboard = types.ReplyKeyboardMarkup(resize_keyboard = True)
-    keyboard.add(*methods_button)
+    keyboard = ReplyKeyboardMarkup(keyboard=[*methods_button], resize_keyboard = True)
     await message.reply(
     'Выберите нужную для Вас функцию:',
     reply = False,
