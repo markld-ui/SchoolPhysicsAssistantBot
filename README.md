@@ -18,9 +18,9 @@ TOKEN = your token bot
 After that, use it in your program.
 
 __File: _data/config.py___
-
 The ".env" file is not present in the repository, but you can create it yourself or do it differently.
 ```python
+from opcode import hasconst
 from environs import Env
 
 env = Env()
